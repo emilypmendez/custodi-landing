@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand core */
+  --custodi-gold: #c9a84c;
+  --custodi-dark: #141414;
+  --off-white: #f4f4f4;
+
+  /* Surfaces */
+  --panel: #1e1e1e;
+  --border: #2a2a2a;
+  --mid: #a8a8a8;
+
+  /* Semantic safety colors (use only for verdict meaning) */
+  --green: #2dd4a0;
+  --amber: #d4912d;
+  --red: #e05757;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--custodi-dark);
+  color: var(--off-white);
+  font-family: var(--font-instrument), system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.65;
+}
+
+::selection {
+  background: rgba(201, 168, 76, 0.25);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(201, 168, 76, 0.6);
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--custodi-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Typography helpers */
+.font-serif {
+  font-family: var(--font-cormorant), ui-serif, Georgia, serif;
+}
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Background glow: gold + subtle rails */
+.bg-custodi {
+  background:
+    radial-gradient(1200px 700px at 20% 0%, rgba(201,168,76,.10), transparent 55%),
+    radial-gradient(900px 600px at 90% 10%, rgba(168,85,247,.08), transparent 60%),
+    radial-gradient(1000px 700px at 60% 120%, rgba(0,194,212,.06), transparent 55%),
+    var(--custodi-dark);
+}
+
+/* Alternating section background */
+.bg-section-alt {
+  background-color: #1a1a1a;
+}
+
+/* Gold accent rule — fades left-to-right */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201,168,76,.35) 0%, transparent 55%);
+}
