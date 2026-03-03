@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import BenefitsSection from "@/app/components/landing/BenefitsSection";
+import DemoSection from "@/app/components/landing/DemoSection";
 import StepsSection from "@/app/components/landing/StepsSection";
 import PricingSection from "@/app/components/landing/PricingSection";
 import FAQSection from "@/app/components/landing/FAQSection";
-import heroMockup from "@/app/components/assets/media/hero-mockup.png";
+import heroMockup from "@/app/components/assets/media/screens/custodi-unlink-demo.png";
 import { Shield, Lock, Cpu, Wallet, Eye, FileCheck } from "lucide-react";
 import ArchitectureDiagram from "./components/assets/ArchitectureDiagram";
 
@@ -219,6 +220,9 @@ export default function Page() {
 
       {/* BENEFITS */}
       <BenefitsSection />
+
+      {/* DEMO */}
+      <DemoSection />
 
       {/* GETTING STARTED */}
       <StepsSection />
