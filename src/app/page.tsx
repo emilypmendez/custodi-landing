@@ -70,7 +70,8 @@ export default function Page() {
 
           {/* CTA Button */}
           <Link
-            href="/early-access"
+            href="https://forms.gle/7oQbghFgYigpJPZW9"
+            target="_blank"
             className="shrink-0 whitespace-nowrap rounded-lg border border-[color:var(--custodi-gold)] px-3 py-2 text-xs font-medium text-[color:var(--custodi-gold)] transition-colors hover:bg-[rgba(201,168,76,.10)] sm:px-4 sm:text-sm"
           >
             Request early access →
@@ -110,7 +111,8 @@ export default function Page() {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/early-access"
+                href="https://forms.gle/7oQbghFgYigpJPZW9"
+                target="_blank"
                 className="inline-flex items-center justify-center rounded-lg border border-[color:var(--custodi-gold)] px-5 py-2.5 text-sm font-medium text-[color:var(--custodi-gold)] transition-colors hover:bg-[rgba(201,168,76,.10)]"
               >
                 Request Early Access →
@@ -245,7 +247,8 @@ export default function Page() {
               Safety will remain mandatory.
             </p>
             <Link
-              href="/early-access"
+              href="https://forms.gle/7oQbghFgYigpJPZW9"
+              target="_blank"
               className="inline-flex items-center justify-center rounded-xl bg-[color:var(--custodi-gold)] px-6 py-3 text-sm font-semibold text-[color:var(--custodi-dark)] transition-colors hover:bg-[#d4b85c]"
             >
               Request Early Access →

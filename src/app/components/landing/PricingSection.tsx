@@ -93,7 +93,7 @@ const PricingSection = () => {
                     : "border border-[color:var(--border)] bg-[#1e1e1e] text-[color:var(--off-white)] hover:bg-[#2a2a2a]"
                 }`}
               >
-                <a href="/early-access">Request early access →</a>
+                <a href="https://forms.gle/7oQbghFgYigpJPZW9" target="_blank">Request early access →</a>
               </Button>
             </div>
           ))}
