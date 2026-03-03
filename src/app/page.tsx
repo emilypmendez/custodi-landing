@@ -92,11 +92,6 @@ export default function Page() {
             transition={{ duration: 0.7 }}
             className="flex flex-1 flex-col"
           >
-            <div className="mb-6 flex flex-wrap gap-2">
-              <Pill tone="gold">AI GOVERNED EXECUTION</Pill>
-              <Pill tone="gold">MANDATORY SAFETY</Pill>
-              <Pill tone="gold">LOCAL BY DESIGN</Pill>
-            </div>
 
             <h1 className="mb-6 text-3xl font-bold leading-tight tracking-tight text-[color:var(--off-white)] sm:text-4xl md:text-5xl lg:text-[56px]">
               Privacy is a human right.{" "}
@@ -122,6 +117,12 @@ export default function Page() {
             <p className="mt-4 text-xs text-[color:var(--mid)]">
               No spam. Just release updates and early access instructions.
             </p>
+            <br/>
+             <div className="mb-6 flex flex-wrap gap-2">
+              <Pill tone="gold">AI GOVERNED EXECUTION</Pill>
+              <Pill tone="gold">MANDATORY SAFETY</Pill>
+              <Pill tone="gold">LOCAL BY DESIGN</Pill>
+            </div>
           </motion.div>
 
           {/* Right: Mockup */}
