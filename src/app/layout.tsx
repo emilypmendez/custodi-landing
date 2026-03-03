@@ -21,9 +21,9 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Custodi — Your finances, guarded.",
+  title: "Custodi — AI Governed Financial Execution",
   description:
-    "Custodi protects people from the moment before they send money. Safety gates privacy at the code level.",
+    "Custodi is an AI governed financial execution platform where safety is mandatory and privacy is preserved. Every transaction is evaluated before execution.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
