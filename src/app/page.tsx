@@ -47,9 +47,16 @@ export default function Page() {
         <div className="mx-auto flex w-[min(1120px,calc(100%-48px))] items-center justify-between gap-4 py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="h-[22px] w-[22px] rounded-lg border border-[rgba(201,168,76,.55)] bg-[radial-gradient(circle_at_35%_30%,rgba(201,168,76,.55),transparent_55%),linear-gradient(135deg,rgba(201,168,76,.18),rgba(201,168,76,.02))]" />
-            <span className="font-serif text-[16px] font-bold tracking-[0.18em] text-[color:var(--custodi-gold)]">
-              CUSTODI
+            <svg className="h-[22px] w-[22px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill="gold"/>
+              <path d="M11 2L2 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke="gold" strokeWidth="1.5"/>
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke="gold" strokeWidth="1.5"/>
+            </svg>
+            <span className="font-serif text-[16px] font-bold tracking-[0.18em] text-[color:var(--custodi-white)]">
+              CUSTODI {" "}{" | "}{" "}
+              <span className="font-serif text-[12px] font-light tracking-[0.18em] text-white">
+              Your finances. Guarded.
+              </span>
             </span>
           </Link>
 
@@ -95,14 +102,14 @@ export default function Page() {
           >
 
             <h1 className="mb-6 text-3xl font-bold leading-tight tracking-tight text-[color:var(--off-white)] sm:text-4xl md:text-5xl lg:text-[56px]">
-              Privacy is a human right.{" "}
-              <span className="text-[color:var(--custodi-gold)]">Protection is a responsibility.</span>
+              Stop losing money.{" "}
+              <span className="text-[color:var(--custodi-gold)]">Protection is here.</span>
             </h1>
 
             <p className="mb-8 max-w-xl text-base leading-relaxed text-[color:var(--mid)] sm:text-lg">
-              Custodi is an AI governed financial execution platform where safety is
+              Custodi is a self-governing financial platform where safety is
               mandatory and privacy is preserved. Every transaction is evaluated
-              before it can be executed. There is no bypass.
+              before it can be executed with AI Safety Agents.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -266,9 +273,16 @@ export default function Page() {
       <footer className="border-t border-[color:var(--border)] bg-[#111111] py-12">
         <div className="mx-auto flex w-[min(1120px,calc(100%-48px))] flex-col items-center gap-4 text-center">
           <div className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-[color:var(--custodi-gold)]" />
-            <span className="font-mono text-sm font-semibold tracking-wide text-[color:var(--off-white)]">
-              CUSTODI
+            <svg className="h-[22px] w-[22px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill="gold"/>
+              <path d="M11 2L2 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke="gold" strokeWidth="1.5"/>
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke="gold" strokeWidth="1.5"/>
+            </svg>
+            <span className="font-serif text-sm font-semibold tracking-wide text-[color:var(--off-white)]">
+              CUSTODI {" "}{" | "}{" "}
+              <span className="font-serif text-[12px] font-light tracking-[0.18em] text-white">
+              Your finances. Guarded.
+              </span>
             </span>
           </div>
           <p className="text-xs text-[color:var(--mid)]">
