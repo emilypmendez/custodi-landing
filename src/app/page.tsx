@@ -288,6 +288,15 @@ export default function Page() {
           <p className="text-xs text-[color:var(--mid)]">
             AI governed financial execution. Safety is mandatory.
           </p>
+          <div className="flex items-center gap-6 text-xs text-[color:var(--mid)]">
+            <Link href="/privacy" className="transition-colors hover:text-[color:var(--custodi-gold)]">
+              Privacy Policy
+            </Link>
+            <span className="opacity-30">|</span>
+            <Link href="/terms" className="transition-colors hover:text-[color:var(--custodi-gold)]">
+              Terms &amp; Conditions
+            </Link>
+          </div>
           <p className="text-xs text-[color:var(--mid)]">
             © {new Date().getFullYear()} Custodi. All rights reserved.
           </p>
