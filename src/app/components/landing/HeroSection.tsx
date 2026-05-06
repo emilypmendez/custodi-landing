@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroMockup from "@/assets/hero-mockup.png";
 
 const HeroSection = () => {
   return (
@@ -48,7 +47,7 @@ const HeroSection = () => {
           </p>
         </motion.div>
 
-        {/* Right: Image */}
+        {/* Right: Video */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -57,9 +56,10 @@ const HeroSection = () => {
         >
           <div className="relative">
             <div className="absolute inset-0 rounded-2xl bg-primary/10 blur-3xl" />
-            <img
-              src={heroMockup}
-              alt="Custodi safety evaluation dashboard"
+            <video
+              src="/videos/custodi-hero.mp4"
+              controls
+              playsInline
               className="relative z-10 w-full max-w-[600px] rounded-2xl border border-border shadow-2xl"
             />
           </div>
