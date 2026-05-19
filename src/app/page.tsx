@@ -3,13 +3,15 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import BenefitsSection from "@/app/components/landing/BenefitsSection";
-import DemoSection from "@/app/components/landing/DemoSection";
 import StepsSection from "@/app/components/landing/StepsSection";
+import SecuritySection from "@/app/components/landing/SecuritySection";
+import SafetyAgentSection from "@/app/components/landing/SafetyAgentSection";
+import PlatformCapabilitiesSection from "@/app/components/landing/PlatformCapabilitiesSection";
+import FeaturesSection from "@/app/components/landing/FeaturesSection";
+import DemoSection from "@/app/components/landing/DemoSection";
 import PricingSection from "@/app/components/landing/PricingSection";
 import FAQSection from "@/app/components/landing/FAQSection";
 import heroMockup from "@/app/components/assets/media/screens/custodi-unlink-demo.png";
-import { Shield, Lock, Cpu, Wallet, Eye, FileCheck } from "lucide-react";
 import ArchitectureDiagram from "./components/assets/ArchitectureDiagram";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -48,9 +50,10 @@ export default function Page() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <svg className="h-[22px] w-[22px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill="gold"/>
-              <path d="M11 2L2 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke="gold" strokeWidth="1.5"/>
-              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke="gold" strokeWidth="1.5"/>
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill="rgba(201,168,76,0.25)"/>
+              <path d="M11 2L20 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke="var(--custodi-gold)" strokeWidth="0.8" fill="none"/>
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke="var(--custodi-gold)" strokeWidth="0.6" fill="none"/>
+              <path d="M2.25 14 Q2 7.5 20 5.5" stroke="var(--custodi-gold)" strokeWidth="0.9" fill="none"/>
             </svg>
             <span className="font-serif text-[16px] font-bold tracking-[0.18em] text-[color:var(--custodi-white)]">
               CUSTODI {" "}{" | "}{" "}
@@ -100,23 +103,49 @@ export default function Page() {
             transition={{ duration: 0.7 }}
             className="flex flex-1 flex-col"
           >
+            {/* Desktop-only badge */}
+            <div className="mb-6">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(201,168,76,.35)] bg-[rgba(201,168,76,.08)] px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.20em] text-[color:var(--custodi-gold)]">
+                <svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="1" y="2" width="14" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+                  <path d="M5 14h6M8 12v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+                Desktop Application Only
+              </span>
+            </div>
 
             <h1 className="mb-6 text-3xl font-bold leading-tight tracking-tight text-[color:var(--off-white)] sm:text-4xl md:text-5xl lg:text-[56px]">
-              Stop losing money.{" "}
-              <span className="text-[color:var(--custodi-gold)]">Protection is here.</span>
+              Your financial privacy,{" "}
+              <span className="text-[color:var(--custodi-gold)]">protected by design.</span>
             </h1>
 
             <p className="mb-8 max-w-xl text-base leading-relaxed text-[color:var(--mid)] sm:text-lg">
-              Custodi is a self-governing financial platform where safety is
-              mandatory and privacy is preserved. Every transaction is evaluated
-              before it can be executed with AI Safety Agents.
+              Custodi is a <strong className="text-[color:var(--off-white)]">desktop application</strong> for individuals and businesses.
+              Connect your external accounts, view all your financial details in one place, and let military-grade
+              encryption and AI-governed safety protect every transaction — locally, on your machine.
             </p>
+
+            {/* Download info box */}
+            <div className="mb-8 flex items-start gap-4 rounded-xl border border-[color:var(--border)] bg-[#1e1e1ecc] p-5">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(201,168,76,.10)]">
+                <svg className="h-5 w-5 text-[color:var(--custodi-gold)]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 3v10M6 9l4 4 4-4M4 16h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <p className="mb-1 text-sm font-semibold text-[color:var(--off-white)]">Download. Connect. Control.</p>
+                <p className="text-xs leading-relaxed text-[color:var(--mid)]">
+                  Install the Custodi desktop app, link your external financial accounts, and get a unified, encrypted view
+                  of your entire financial infrastructure — with zero data leaving your machine.
+                </p>
+              </div>
+            </div>
 
             <div className="flex flex-wrap gap-4">
               <Link
                 href="https://forms.gle/7oQbghFgYigpJPZW9"
                 target="_blank"
-                className="inline-flex items-center justify-center rounded-lg border border-[color:var(--custodi-gold)] px-5 py-2.5 text-sm font-medium text-[color:var(--custodi-gold)] transition-colors hover:bg-[rgba(201,168,76,.10)]"
+                className="inline-flex items-center justify-center rounded-lg bg-[color:var(--custodi-gold)] px-6 py-3 text-sm font-semibold text-[color:var(--custodi-dark)] transition-colors hover:bg-[#d4b85c]"
               >
                 Request Early Access →
               </Link>
@@ -125,11 +154,12 @@ export default function Page() {
             <p className="mt-4 text-xs text-[color:var(--mid)]">
               No spam. Just release updates and early access instructions.
             </p>
-            <br/>
-             <div className="mb-6 flex flex-wrap gap-2">
-              <Pill tone="gold">AI GOVERNED EXECUTION</Pill>
-              <Pill tone="gold">MANDATORY SAFETY</Pill>
-              <Pill tone="gold">LOCAL BY DESIGN</Pill>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              <Pill>DESKTOP ONLY</Pill>
+              <Pill>AI GOVERNED EXECUTION</Pill>
+              <Pill>BANK-GRADE ENCRYPTION</Pill>
+              <Pill>LOCAL BY DESIGN</Pill>
             </div>
           </motion.div>
 
@@ -140,99 +170,41 @@ export default function Page() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-1 items-center justify-center"
           >
-            <div className="relative w-full max-w-[500px] lg:max-w-[550px]">
+            <div className="relative w-full max-w-[500px] lg:max-w-[560px]">
               <div className="absolute inset-0 rounded-2xl bg-[rgba(201,168,76,.08)] blur-3xl" />
               <Image
                 src={heroMockup}
-                alt="Custodi safety evaluation dashboard"
+                alt="Custodi dashboard — account balances and agent stack"
                 className="relative z-10 w-full rounded-2xl border border-[rgba(201,168,76,.35)] shadow-[0_0_40px_rgba(201,168,76,.25)] transition-transform duration-300 ease-out hover:scale-105"
                 priority
               />
-              <br/>
-              <div className="mb-6 flex flex-wrap gap-2 justify-center">
-                  <Pill tone="neutral">AVOID LOSSES. PROTECT YOURSELF.</Pill>
-              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* FEATURES */}
-      <section id="features" className="relative border-t border-[color:var(--border)] py-24">
-        {/* Architecture anchor for nav link */}
-        <div id="architecture" className="absolute -top-20" />
+      {/* HOW IT WORKS */}
+      <StepsSection />
 
-        <div className="mx-auto w-[min(1120px,calc(100%-48px))]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16 text-center"
-          >
-            <SectionLabel>SAFETY IS STRUCTURAL</SectionLabel>
-            <h2 className="mb-4 mt-4 text-3xl font-bold text-[color:var(--off-white)] sm:text-4xl">
-              Safety is enforced, not suggested.
-            </h2>
-            <p className="mx-auto max-w-2xl text-[color:var(--mid)]">
-              Before any transfer is broadcast: behavioral signals are evaluated, risk and compliance checks run,
-              execution is gated by orchestration, and ledger state is recorded.
-            </p>
-          </motion.div>
+      {/* SECURITY */}
+      <SecuritySection />
 
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={{
-              hidden: {},
-              show: { transition: { staggerChildren: 0.1 } },
-            }}
-            className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-          >
-            {[
-              { icon: Shield, title: "Personal Safety Agent", description: "On-device ML evaluation with trust graph, social engineering detection, and mandatory cooling off periods.", bullets: ["No remote behavioral scoring", "No external API calls during evaluation", "No network broadcast until cleared", "Runs entirely on your machine"] },
-              { icon: Lock, title: "Execution Guarantee", description: "Safety is enforced at the orchestration layer, not at the interface. A RED verdict blocks all downstream execution.", bullets: ["GREEN proceeds", "AMBER pauses with cooling off", "RED blocks — no bypass exists", "Deterministic gate enforcement"] },
-              { icon: Cpu, title: "Agent Architecture", description: "Modular AI agents with strict separation of concern. Every request begins and ends with the Orchestrator.", bullets: ["10 specialized AI agents", "Append-only ledger state", "Structured execution pipeline", "Orchestrator routing logic"] },
-              { icon: Wallet, title: "Wallet Execution", description: "USDC wallet execution on Base L2 and Monad. Keys stored in Tauri Stronghold with pre-approval gates.", bullets: ["Base L2 and Monad support", "Tauri Stronghold key storage", "Idempotent by design", "Pre-approve + rail pattern"] },
-              { icon: Eye, title: "Unlink Privacy", description: "ZK private transfer wrapper for approved USDC sends. Activated only after GREEN or AMBER post-timer.", bullets: ["Zero-knowledge proofs", "Privacy preserving transfers", "Activated post-verdict only", "Revenue neutral safety"] },
-              { icon: FileCheck, title: "Explainable Verdicts", description: "Every GREEN, AMBER, or RED decision includes structured reasoning derived from five behavioral signals.", bullets: ["Trust graph integrity", "Transaction amount anomaly", "14-day rolling baseline", "AML velocity screening"] },
-            ].map(({ icon: Icon, title, description, bullets }) => (
-              <motion.div
-                key={title}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-                }}
-                className="group rounded-xl border border-[color:var(--border)] bg-[#1e1e1ecc] p-6 transition-all hover:border-[rgba(201,168,76,.30)] hover:shadow-lg hover:shadow-[rgba(201,168,76,.05)]"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[rgba(201,168,76,.10)]">
-                  <Icon className="h-6 w-6 text-[color:var(--custodi-gold)]" />
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-[color:var(--off-white)]">{title}</h3>
-                <p className="mb-4 text-sm text-[color:var(--mid)]">{description}</p>
-                <ul className="space-y-2">
-                  {bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-sm text-[color:var(--mid)]">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[color:var(--custodi-gold)]" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-        <ArchitectureDiagram />
-      </section>
-
-      {/* BENEFITS */}
-      <BenefitsSection />
+      {/* SAFETY AGENT */}
+      <SafetyAgentSection />
 
       {/* DEMO */}
       <DemoSection />
 
-      {/* GETTING STARTED */}
-      <StepsSection />
+      {/* PLATFORM CAPABILITIES */}
+      <PlatformCapabilitiesSection />
+
+      {/* SAFETY IS STRUCTURAL */}
+      <FeaturesSection />
+
+      {/* ARCHITECTURE */}
+      <section id="architecture" className="border-t border-[color:var(--border)] py-16">
+        <ArchitectureDiagram />
+      </section>
 
       {/* PRICING */}
       <PricingSection />
@@ -274,9 +246,10 @@ export default function Page() {
         <div className="mx-auto flex w-[min(1120px,calc(100%-48px))] flex-col items-center gap-4 text-center">
           <div className="flex items-center gap-2">
             <svg className="h-[22px] w-[22px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill="gold"/>
-              <path d="M11 2L2 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke="gold" strokeWidth="1.5"/>
-              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke="gold" strokeWidth="1.5"/>
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill="rgba(201,168,76,0.25)"/>
+              <path d="M11 2L20 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke="var(--custodi-gold)" strokeWidth="0.8" fill="none"/>
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke="var(--custodi-gold)" strokeWidth="0.6" fill="none"/>
+              <path d="M2.25 14 Q2 7.5 20 5.5" stroke="var(--custodi-gold)" strokeWidth="0.9" fill="none"/>
             </svg>
             <span className="font-serif text-sm font-semibold tracking-wide text-[color:var(--off-white)]">
               CUSTODI {" "}{" | "}{" "}

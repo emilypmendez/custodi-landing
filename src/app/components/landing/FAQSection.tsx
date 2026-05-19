@@ -8,27 +8,35 @@ import {
 const faqs = [
   {
     q: "What is Custodi?",
-    a: "Custodi is an AI governed financial execution platform where safety is mandatory and privacy is preserved. Every transaction is evaluated by a local AI agent before it can be executed.",
+    a: "Custodi is a desktop application for individuals and businesses that connects your external financial accounts, displays all your financial details in one place, and enforces military-grade encryption and AI-governed safety on every transaction — locally, on your machine. No data leaves your device.",
+  },
+  {
+    q: "Why is Custodi a desktop app and not a web app?",
+    a: "Security features like OS-level key vaults, offline-first data caching, and local AI evaluation are only possible in a native desktop environment. A browser tab cannot isolate credentials from other apps, cannot run AI evaluation without a server, and cannot guarantee zero data exfiltration. Custodi is a desktop application by design.",
   },
   {
     q: "How does the Safety Agent work?",
-    a: "The Personal Safety Agent runs entirely on your device using on-device ML. It evaluates behavioral signals, trust graph integrity, transaction anomalies, and AML velocity — all locally with no external API calls.",
+    a: "The Personal Safety Agent runs entirely on your device. Before any transaction can be broadcast, it evaluates five behavioral signals: trust graph integrity, amount anomaly, 14-day rolling baseline, AML velocity screening, and social engineering detection — all locally with no external API calls.",
   },
   {
     q: "Can a RED verdict be overridden?",
-    a: "No. There is no path from a RED verdict to execution. Safety is enforced at the orchestration layer, not at the interface. No bypass, no override, deterministic gates.",
+    a: "No. There is no path from a RED verdict to execution. The transaction is blocked with no override path. Social engineering, anomalous amounts, or AML flags trigger a hard stop. Safety is enforced at the orchestration layer — not at the interface.",
   },
   {
     q: "What happens with an AMBER verdict?",
-    a: "AMBER enforces a mandatory cooling-off period (currently 30 seconds). The timer must complete before execution can proceed. This protects against impulsive or coerced transactions.",
+    a: "AMBER enforces a mandatory cooling-off period. The transaction is paused and you must reconfirm after the timer completes. This protects against pressure or impulsive decisions. You cannot skip the timer.",
   },
   {
-    q: "Is my data sent to external servers?",
-    a: "No. The safety evaluation runs entirely on your machine. No remote behavioral scoring, no external API calls during evaluation, no local HTTP exposure, and no network broadcast until execution is cleared.",
+    q: "How are my credentials and keys stored?",
+    a: "All credentials and private keys are stored in a Tauri Stronghold vault — an OS-level encrypted store isolated from the filesystem, inaccessible to other apps, and never written to unprotected disk. Keys are never exposed in memory beyond their immediate use.",
   },
   {
-    q: "What currencies and chains are supported?",
-    a: "Custodi currently supports USDC execution on Base L2 and Monad. Fiat rails and additional chains are on the roadmap.",
+    q: "Does Custodi send any data to external servers?",
+    a: "No financial data ever leaves your machine. There are no telemetry calls, no remote logging, and no server-side storage of your account information. Safety evaluation runs entirely on-device. Network access only happens when you initiate a sync or broadcast a cleared transaction.",
+  },
+  {
+    q: "Which platforms does Custodi support?",
+    a: "Custodi is available for macOS and Windows. Linux support is on the roadmap.",
   },
 ];
 

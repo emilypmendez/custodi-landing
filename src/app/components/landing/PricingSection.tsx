@@ -9,28 +9,31 @@ const plans = [
       "Safety Agent enforcement",
       "Public transfers",
       "Explainable verdicts",
+      "Single wallet",
     ],
     highlighted: false,
   },
   {
-    name: "PRO",
-    price: "$20/mo",
+    name: "PROFESSIONAL",
+    price: "$25/month",
     fee: "2.99% processing fee per transaction",
     features: [
       "Private transfers via Unlink",
       "AMBER cooling off protection",
       "Priority updates",
+      "Multi-wallet support",
     ],
     highlighted: true,
   },
   {
-    name: "BUSINESS",
-    price: "$50/mo",
+    name: "ENTERPRISE",
+    price: "$50/seat/month",
     fee: "2.99% processing fee per transaction",
     features: [
       "Multi-sig approvals",
       "Admin-level risk thresholds",
       "Audit exports",
+      "Team governance controls",
       "Managed recovery (coming soon)",
     ],
     highlighted: false,
@@ -50,6 +53,7 @@ const PricingSection = () => {
           </h2>
           <p className="mx-auto max-w-2xl text-[color:var(--mid)]">
             The Safety Agent remains mandatory across all tiers. Plans affect privacy and governance capabilities.
+            Choose the right fit for your needs — individual or business.
           </p>
         </div>
 

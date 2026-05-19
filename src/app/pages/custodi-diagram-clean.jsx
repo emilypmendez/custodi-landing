@@ -200,9 +200,11 @@ export default function CustodiDiagram() {
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 6 }}>
           {/* Logo */}
           <div style={{ width: 36, height: 36, borderRadius: 8, border: `1.5px solid ${T.goldBorder}`, background: T.goldBg, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <polygon points="12,1 21,6 21,18 12,23 3,18 3,6" stroke={T.gold} strokeWidth="1.5" fill="none" />
-              <text x="12" y="16" textAnchor="middle" fill={T.gold} fontSize="9" fontFamily="'IBM Plex Sans',Arial,sans-serif" fontWeight="700">C</text>
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill={T.goldBorder + "44"} />
+              <path d="M11 2L20 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke={T.gold} strokeWidth="0.5" fill="none" />
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke={T.gold} strokeWidth="0.35" fill="none" />
+              <path d="M2.25 14 Q2 7.5 20 5.5" stroke={T.gold} strokeWidth="0.55" fill="none" />
             </svg>
           </div>
           <div>

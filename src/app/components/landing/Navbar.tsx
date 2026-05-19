@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -22,7 +22,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <a href="#" className="flex items-center gap-2">
-          <Shield className="h-6 w-6 text-primary" />
+          <svg className="h-[22px] w-[22px]" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill="rgba(201,168,76,0.25)"/>
+            <path d="M11 2L20 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke="var(--custodi-gold)" strokeWidth="0.8" fill="none"/>
+            <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke="var(--custodi-gold)" strokeWidth="0.6" fill="none"/>
+            <path d="M2.25 14 Q2 7.5 20 5.5" stroke="var(--custodi-gold)" strokeWidth="0.9" fill="none"/>
+          </svg>
           <span className="font-mono text-lg font-semibold tracking-wide text-foreground">
             CUSTODI
           </span>

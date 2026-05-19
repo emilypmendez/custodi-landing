@@ -39,9 +39,11 @@ const CSS = `
 function LogoHex({ size = 76, fontSize = 28, borderRadius = 18, animate = false }) {
   return (
     <div style={{ width: size, height: size, borderRadius, background: C.goldDim, border: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: `0 0 40px ${C.goldGlow}`, animation: animate ? "float 4s ease-in-out infinite" : "none", position: "relative", flexShrink: 0 }}>
-      <svg width={size * 0.62} height={size * 0.62} viewBox="0 0 48 48" fill="none">
-        <polygon points="24,2 42,12 42,36 24,46 6,36 6,12" stroke={C.gold} strokeWidth="1.5" fill="none" opacity="0.6" />
-        <text x="24" y="30" textAnchor="middle" fill={C.gold} fontSize="18" fontFamily="'Cormorant Garamond','Georgia',serif" fontWeight="700">C</text>
+      <svg width={size * 0.62} height={size * 0.62} viewBox="0 0 22 22" fill="none">
+        <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill={C.goldBorder} />
+        <path d="M11 2L20 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke={C.gold} strokeWidth="0.5" fill="none" />
+        <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke={C.gold} strokeWidth="0.35" fill="none" />
+        <path d="M2.25 14 Q2 7.5 20 5.5" stroke={C.gold} strokeWidth="0.55" fill="none" />
       </svg>
     </div>
   );
@@ -50,9 +52,11 @@ function LogoHex({ size = 76, fontSize = 28, borderRadius = 18, animate = false 
 function LogoHexSmall({ size = 22, borderRadius = 6 }) {
   return (
     <div style={{ width: size, height: size, borderRadius, background: C.goldDim, border: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-      <svg width={size * 0.72} height={size * 0.72} viewBox="0 0 24 24" fill="none">
-        <polygon points="12,1 21,6 21,18 12,23 3,18 3,6" stroke={C.gold} strokeWidth="1.2" fill="none" opacity="0.7" />
-        <text x="12" y="16" textAnchor="middle" fill={C.gold} fontSize="9" fontFamily="'Cormorant Garamond','Georgia',serif" fontWeight="700">C</text>
+      <svg width={size * 0.72} height={size * 0.72} viewBox="0 0 22 22" fill="none">
+        <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill={C.goldBorder} />
+        <path d="M11 2L20 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke={C.gold} strokeWidth="0.8" fill="none" />
+        <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke={C.gold} strokeWidth="0.6" fill="none" />
+        <path d="M2.25 14 Q2 7.5 20 5.5" stroke={C.gold} strokeWidth="0.9" fill="none" />
       </svg>
     </div>
   );

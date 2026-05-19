@@ -74,9 +74,11 @@ export default function CustodiDiagram() {
       <div style={{ marginBottom: 28 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
           <div style={{ position: "relative", width: 40, height: 40, flexShrink: 0 }}>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <polygon points="20,2 35,10 35,30 20,38 5,30 5,10" stroke={C.gold} strokeWidth="1.5" fill={C.goldDim} />
-              <text x="20" y="25" textAnchor="middle" fill={C.gold} fontSize="14" fontFamily="'Cormorant Garamond','Georgia',serif" fontWeight="700">C</text>
+            <svg width="40" height="40" viewBox="0 0 22 22" fill="none">
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill={C.goldBorder} />
+              <path d="M11 2L20 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke={C.gold} strokeWidth="0.5" fill="none" />
+              <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke={C.gold} strokeWidth="0.35" fill="none" />
+              <path d="M2.25 14 Q2 7.5 20 5.5" stroke={C.gold} strokeWidth="0.55" fill="none" />
             </svg>
           </div>
           <div>
@@ -130,14 +132,18 @@ export default function CustodiDiagram() {
             {/* CUSTODI AGENT STACK */}
             <div style={{ flexShrink: 0, flex: "0 0 auto", width: 520, background: C.panel, border: `1px solid ${C.goldBorder}`, borderRadius: 14, padding: "18px 16px", boxShadow: `0 0 40px ${C.goldGlow}`, position: "relative" }}>
               <div style={{ position: "absolute", top: -11, left: "50%", transform: "translateX(-50%)", display: "flex", alignItems: "center", gap: 8 }}>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <polygon points="10,1 18,5.5 18,14.5 10,19 2,14.5 2,5.5" stroke={C.gold} strokeWidth="1.2" fill={C.bg} />
-                  <text x="10" y="13" textAnchor="middle" fill={C.gold} fontSize="7" fontFamily="'Cormorant Garamond',serif" fontWeight="700">C</text>
+                <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill={C.goldBorder} />
+                  <path d="M11 2L20 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke={C.gold} strokeWidth="0.7" fill="none" />
+                  <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke={C.gold} strokeWidth="0.5" fill="none" />
+                  <path d="M2.25 14 Q2 7.5 20 5.5" stroke={C.gold} strokeWidth="0.8" fill="none" />
                 </svg>
                 <div style={{ background: C.bg, border: `1px solid ${C.goldBorder}`, borderRadius: 4, padding: "3px 12px", fontSize: 9, letterSpacing: 3, color: C.gold }}>CUSTODI AGENT STACK</div>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <polygon points="10,1 18,5.5 18,14.5 10,19 2,14.5 2,5.5" stroke={C.gold} strokeWidth="1.2" fill={C.bg} />
-                  <text x="10" y="13" textAnchor="middle" fill={C.gold} fontSize="7" fontFamily="'Cormorant Garamond',serif" fontWeight="700">C</text>
+                <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill={C.goldBorder} />
+                  <path d="M11 2L20 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke={C.gold} strokeWidth="0.7" fill="none" />
+                  <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke={C.gold} strokeWidth="0.5" fill="none" />
+                  <path d="M2.25 14 Q2 7.5 20 5.5" stroke={C.gold} strokeWidth="0.8" fill="none" />
                 </svg>
               </div>
 

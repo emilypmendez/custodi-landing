@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="512" height="512">
+  <!-- RIGHT HALF FILL — fills the right quadrant of the shield with dim gold -->
+  <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21V2Z" fill="#8B6914"/>
+  <!-- SHIELD OUTLINE — full shield border -->
+  <path d="M11 2L20 5.5V12C2 16.5 6 19.5 11 21C6 19.5 2 16.5 2 12V5.5L11 2Z" stroke="#C9A84C" stroke-width=".5" fill="none"/>
+  <!-- CENTER DIVIDER — line splitting left and right halves of the shield -->
+  <path d="M11 2L20 5.5V12C20 16.5 16 19.5 11 21L11 2Z" stroke="#C9A84C" stroke-width=".35" fill="none"/>
+  <!-- PRIMARY CURVE — sweeps from left edge up to top-right corner -->
+  <path d="M2.25 14 Q2 7.5 20 5.5" stroke="#C9A84C" stroke-width=".55" fill="none"/>
+</svg>
