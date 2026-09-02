@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Shield, Lock, Cpu, Wallet, Eye, FileCheck } from "lucide-react";
+import FloatingOrbs from "@/app/components/decorative/FloatingOrbs";
+import GhostlyWatermark from "@/app/components/decorative/GhostlyWatermark";
+import GradientAccent from "@/app/components/decorative/GradientAccent";
 
 const features = [
   {
@@ -54,8 +57,12 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="border-t border-[color:var(--border)] py-24">
-      <div className="mx-auto w-[min(1120px,calc(100%-48px))]">
+    <section className="relative border-t border-[color:var(--border)] py-24 overflow-hidden">
+      <GradientAccent variant="subtle" direction="vertical" />
+      <FloatingOrbs count={3} intensity="light" />
+      <GhostlyWatermark opacity={0.07} scale={0.9} position="top-right" />
+
+      <div className="mx-auto w-[min(1120px,calc(100%-48px))] relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

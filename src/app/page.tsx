@@ -13,6 +13,11 @@ import PricingSection from "@/app/components/landing/PricingSection";
 import FAQSection from "@/app/components/landing/FAQSection";
 import heroMockup from "@/app/components/assets/media/screens/custodi-unlink-demo.png";
 import ArchitectureDiagram from "./components/assets/ArchitectureDiagram";
+import AppDescriptionSection from "./components/landing/AppDescriptionSection";
+import UnifiedAccountsSection from "./components/landing/UnifiedAccountsSection";
+import AnimatedDivider from "./components/decorative/AnimatedDivider";
+import FloatingOrbs from "./components/decorative/FloatingOrbs";
+import GhostlyWatermark from "./components/decorative/GhostlyWatermark";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -94,6 +99,8 @@ export default function Page() {
       <section className="relative overflow-hidden">
         {/* Ambient glow */}
         <div className="pointer-events-none absolute -top-40 left-1/2 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-[rgba(201,168,76,.05)] blur-[120px]" />
+        <FloatingOrbs count={2} intensity="medium" />
+        <GhostlyWatermark opacity={0.07} scale={1.2} position="top-left" />
 
         <div className="mx-auto flex min-h-[calc(100vh-73px)] w-[min(1120px,calc(100%-48px))] flex-col gap-12 py-16 lg:flex-row lg:items-center lg:gap-16 lg:py-24">
           {/* Left: Text */}
@@ -183,10 +190,19 @@ export default function Page() {
         </div>
       </section>
 
+      {/* APP DESCRIPTION */}
+      <AppDescriptionSection />
+
+      {/* UNIFIED ACCOUNTS */}
+      <UnifiedAccountsSection />
+
       {/* HOW IT WORKS */}
       <StepsSection />
 
       {/* SECURITY */}
+      <div className="px-8">
+        <AnimatedDivider variant="gradient" />
+      </div>
       <SecuritySection />
 
       {/* SAFETY AGENT */}
@@ -199,10 +215,16 @@ export default function Page() {
       <PlatformCapabilitiesSection />
 
       {/* SAFETY IS STRUCTURAL */}
+      <div className="px-8">
+        <AnimatedDivider variant="shimmer" />
+      </div>
       <FeaturesSection />
 
       {/* ARCHITECTURE */}
-      <section id="architecture" className="border-t border-[color:var(--border)] py-16">
+      <section id="architecture" className="py-16">
+        <div className="mb-8">
+          <AnimatedDivider variant="glow" />
+        </div>
         <ArchitectureDiagram />
       </section>
 
@@ -210,10 +232,16 @@ export default function Page() {
       <PricingSection />
 
       {/* FAQ */}
+      <div className="px-8">
+        <AnimatedDivider variant="gradient" />
+      </div>
       <FAQSection />
 
       {/* CTA / VISION */}
-      <section className="relative overflow-hidden border-t border-[color:var(--border)] py-24">
+      <section className="relative overflow-hidden py-24">
+        <div className="mb-12">
+          <AnimatedDivider variant="shimmer" />
+        </div>
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(201,168,76,.05)] to-transparent" />
         <div className="relative mx-auto w-[min(1120px,calc(100%-48px))] text-center">
           <motion.div

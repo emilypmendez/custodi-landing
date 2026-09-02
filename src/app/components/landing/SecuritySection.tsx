@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Lock, Key, EyeOff, BookOpen, UserCheck, Shield } from "lucide-react";
+import FloatingOrbs from "@/app/components/decorative/FloatingOrbs";
+import GhostlyWatermark from "@/app/components/decorative/GhostlyWatermark";
 
 const securityFeatures = [
   {
@@ -44,8 +46,11 @@ const securityFeatures = [
 
 const SecuritySection = () => {
   return (
-    <section className="border-t border-[color:var(--border)] py-24">
-      <div className="mx-auto w-[min(1120px,calc(100%-48px))]">
+    <section className="relative border-t border-[color:var(--border)] py-24 overflow-hidden">
+      <FloatingOrbs count={2} intensity="light" />
+      <GhostlyWatermark opacity={0.06} scale={0.75} position="bottom-right" />
+
+      <div className="mx-auto w-[min(1120px,calc(100%-48px))] relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
