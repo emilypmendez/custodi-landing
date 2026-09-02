@@ -26,7 +26,7 @@ const AppDescriptionSection = () => {
   const scrollArrow = {
     initial: { y: 0 },
     animate: { y: [0, 8, 0] },
-    transition: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+    transition: { duration: 2, repeat: Infinity, ease: "easeInOut" as const },
   };
 
   return (
