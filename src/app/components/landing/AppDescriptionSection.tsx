@@ -88,7 +88,7 @@ const AppDescriptionSection = () => {
                 </h3>
 
                 <p className="mb-6 text-sm leading-relaxed text-[color:var(--mid)]">
-                  Take control of your finances with AI-governed execution. Connect all your accounts, view unified balances,
+                  Take control of your finances with a security guard on every transaction. Connect all your accounts, view unified balances,
                   and execute transactions with safety built in — not bolted on.
                 </p>
 

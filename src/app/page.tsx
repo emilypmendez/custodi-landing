@@ -123,14 +123,14 @@ export default function Page() {
             </div>
 
             <h1 className="mb-6 text-3xl font-bold leading-tight tracking-tight text-[color:var(--off-white)] sm:text-4xl md:text-5xl lg:text-[56px]">
-              Your financial privacy,{" "}
-              <span className="text-[color:var(--custodi-gold)]">protected by design.</span>
+              Your wealth has a{" "}
+              <span className="text-[color:var(--custodi-gold)]">security guard.</span>
             </h1>
 
             <p className="mb-8 max-w-xl text-base leading-relaxed text-[color:var(--mid)] sm:text-lg">
-              Custodi is a <strong className="text-[color:var(--off-white)]">desktop application</strong> for individuals and businesses.
-              Connect your external accounts, view all your financial details in one place, and let military-grade
-              encryption and AI-governed safety protect every transaction — locally, on your machine.
+              Custodi is a <strong className="text-[color:var(--off-white)]">desktop application</strong> that stands guard over
+              individual and enterprise wealth. Connect your external accounts, view all your financial details in one place,
+              and every transaction is checked with military-grade encryption and mandatory safety checks — locally, on your machine.
             </p>
 
             {/* Download info box */}
@@ -166,7 +166,7 @@ export default function Page() {
 
             <div className="mt-6 flex flex-wrap gap-2">
               <Pill>DESKTOP ONLY</Pill>
-              <Pill>AI GOVERNED EXECUTION</Pill>
+              <Pill>GUARDED EXECUTION</Pill>
               <Pill>BANK-GRADE ENCRYPTION</Pill>
               <Pill>LOCAL BY DESIGN</Pill>
             </div>
@@ -253,7 +253,7 @@ export default function Page() {
           >
             <SectionLabel>VISION</SectionLabel>
             <h2 className="mb-4 mt-4 text-3xl font-bold text-[color:var(--off-white)] sm:text-4xl">
-              Building toward governed financial infrastructure.
+              Building the security guard for every portfolio.
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-[color:var(--mid)]">
               Custodi is evolving into a managed financial environment with identity-backed recovery,
@@ -289,7 +289,7 @@ export default function Page() {
             </span>
           </div>
           <p className="text-xs text-[color:var(--mid)]">
-            AI governed financial execution. Safety is mandatory.
+            Where safety is mandatory and baked into every layer.
           </p>
           <div className="flex items-center gap-3">
             <span className="font-mono text-[10px] uppercase tracking-[0.20em] text-[color:var(--mid)]">Desktop app for</span>

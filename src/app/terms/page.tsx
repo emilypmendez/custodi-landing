@@ -105,7 +105,7 @@ export default function TermsPage() {
           {/* 3. The Service */}
           <TermsSection label="03 — THE SERVICE" title="What Custodi provides.">
             <p>
-              Custodi is an AI governed financial execution platform that facilitates USDC
+              Custodi is a financial execution platform that facilitates USDC
               transactions on Base L2 and Monad blockchain networks. The platform includes a
               local-first Personal Safety Agent that evaluates transactions prior to execution,
               a zero-knowledge private transfer layer (Unlink), and a multi-agent orchestration
@@ -382,7 +382,7 @@ function SiteFooter() {
           </span>
         </div>
         <p className="text-xs text-[color:var(--mid)]">
-          AI governed financial execution. Safety is mandatory.
+          Where safety is mandatory and baked into every layer.
         </p>
         <div className="flex items-center gap-6 text-xs text-[color:var(--mid)]">
           <Link href="/privacy" className="transition-colors hover:text-[color:var(--custodi-gold)]">

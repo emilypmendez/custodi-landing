@@ -16,7 +16,7 @@ const HeroSection = () => {
           className="flex flex-1 flex-col justify-center"
         >
           <div className="mb-6 flex flex-wrap gap-3">
-            {["AI GOVERNED EXECUTION", "MANDATORY SAFETY", "LOCAL BY DESIGN"].map(
+            {["GUARDED EXECUTION", "MANDATORY SAFETY", "LOCAL BY DESIGN"].map(
               (tag) => (
                 <span key={tag} className="section-label rounded-full border border-primary/20 bg-primary/5 px-3 py-1">
                   {tag}
@@ -31,8 +31,8 @@ const HeroSection = () => {
           </h1>
 
           <p className="mb-8 max-w-lg text-lg text-muted-foreground">
-            Custodi is an AI governed financial execution platform where safety is
-            mandatory and privacy is preserved. Every transaction is evaluated
+            Custodi is a security guard for individual and enterprise wealth. Safety
+            is mandatory and baked into every layer, and privacy is preserved. Every transaction is evaluated
             before it can be executed. There is no bypass.
           </p>
 

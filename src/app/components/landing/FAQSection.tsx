@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     q: "What is Custodi?",
-    a: "Custodi is a desktop application for individuals and businesses that connects your external financial accounts, displays all your financial details in one place, and enforces military-grade encryption and AI-governed safety on every transaction — locally, on your machine. No data leaves your device.",
+    a: "Custodi is a desktop application for individuals and businesses that connects your external financial accounts, displays all your financial details in one place, and stands guard over every transaction with military-grade encryption and mandatory safety checks — locally, on your machine. No data leaves your device.",
   },
   {
     q: "Why is Custodi a desktop app and not a web app?",

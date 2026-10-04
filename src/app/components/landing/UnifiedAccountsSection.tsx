@@ -47,7 +47,7 @@ const UnifiedAccountsSection = () => {
           </h2>
           <p className="mx-auto max-w-2xl text-[color:var(--mid)]">
             Connect all your bank accounts, crypto wallets, and financial services to one synchronized dashboard.
-            See your complete financial picture across traditional and digital assets — all protected by AI-governed safety.
+            See your complete financial picture across traditional and digital assets — all under Custodi's guard.
           </p>
         </motion.div>
 

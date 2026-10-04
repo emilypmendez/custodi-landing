@@ -11,7 +11,7 @@ const Footer = () => {
           </span>
         </div>
         <p className="text-xs text-muted-foreground">
-          AI governed financial execution. Safety is mandatory.
+          Where safety is mandatory and baked into every layer.
         </p>
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Custodi. All rights reserved.

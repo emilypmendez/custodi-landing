@@ -31,7 +31,7 @@ const steps = [
     number: "03",
     title: "Manage Your Finances",
     description:
-      "View every balance, transaction, and account in one unified dashboard. Execute transfers with AI-governed safety — every action evaluated, every decision explained, every key protected.",
+      "View every balance, transaction, and account in one unified dashboard. Execute transfers with Custodi standing guard — every action evaluated, every decision explained, every key protected.",
     tags: ["Unified dashboard", "Safety-gated execution"],
     icon: (
       <svg className="h-5 w-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

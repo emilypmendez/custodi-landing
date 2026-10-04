@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const benefits = [
   {
     icon: Zap,
-    title: "Governed Execution",
+    title: "Guarded Execution",
     description:
       "Every transaction passes through deterministic safety gates. No override exists. No path from RED verdict to execution.",
   },

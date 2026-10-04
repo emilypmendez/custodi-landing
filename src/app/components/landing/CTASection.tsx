@@ -13,7 +13,7 @@ const CTASection = () => {
         >
           <span className="section-label mb-4 block">Vision</span>
           <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl">
-            Building toward governed financial infrastructure.
+            Building the security guard for every portfolio.
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-muted-foreground">
             Custodi is evolving into a managed financial environment with identity-backed recovery,

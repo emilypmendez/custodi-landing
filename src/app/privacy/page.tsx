@@ -75,8 +75,8 @@ export default function PrivacyPage() {
           {/* 1. Introduction */}
           <PolicySection label="01 — INTRODUCTION" title="Built for privacy from the ground up.">
             <p>
-              Custodi is an AI governed financial execution platform where safety is mandatory and
-              privacy is preserved. Unlike traditional financial applications, Custodi&apos;s core
+              Custodi is a financial platform where safety is mandatory and baked into every layer,
+              and privacy is preserved. Unlike traditional financial applications, Custodi&apos;s core
               evaluation engine runs entirely on your device. Your transaction activity, behavioral
               signals, and financial history are never transmitted to our servers — because our
               architecture never needs them to be.
@@ -403,7 +403,7 @@ function SiteFooter() {
           </span>
         </div>
         <p className="text-xs text-[color:var(--mid)]">
-          AI governed financial execution. Safety is mandatory.
+          Where safety is mandatory and baked into every layer.
         </p>
         <div className="flex items-center gap-6 text-xs text-[color:var(--mid)]">
           <Link href="/privacy" className="transition-colors hover:text-[color:var(--custodi-gold)]">
