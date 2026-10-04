@@ -41,7 +41,8 @@ const AnimatedDivider = ({ variant = "gradient" }: AnimatedDividerProps) => {
 
   // glow variant
   return (
-    <div ref={ref} className="relative h-px w-full">
+    // overflow-x-clip (not hidden) so the vertical glow shadow isn't clipped by the 1px height
+    <div ref={ref} className="relative h-px w-full overflow-x-clip">
       <div className="absolute inset-0 bg-[color:var(--border)]" />
       <motion.div
         className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-transparent via-[rgba(201,168,76,0.6)] to-transparent shadow-[0_0_20px_rgba(201,168,76,0.3)]"
