@@ -18,6 +18,7 @@ import UnifiedAccountsSection from "./components/landing/UnifiedAccountsSection"
 import AnimatedDivider from "./components/decorative/AnimatedDivider";
 import FloatingOrbs from "./components/decorative/FloatingOrbs";
 import GhostlyWatermark from "./components/decorative/GhostlyWatermark";
+import PlatformBadges from "./components/landing/PlatformBadges";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -145,6 +146,7 @@ export default function Page() {
                   Install the Custodi desktop app, link your external financial accounts, and get a unified, encrypted view
                   of your entire financial infrastructure — with zero data leaving your machine.
                 </p>
+                <PlatformBadges className="mt-4 border-t border-[color:var(--border)] pt-3" />
               </div>
             </div>
 
@@ -289,6 +291,10 @@ export default function Page() {
           <p className="text-xs text-[color:var(--mid)]">
             AI governed financial execution. Safety is mandatory.
           </p>
+          <div className="flex items-center gap-3">
+            <span className="font-mono text-[10px] uppercase tracking-[0.20em] text-[color:var(--mid)]">Desktop app for</span>
+            <PlatformBadges variant="icons" />
+          </div>
           <div className="flex items-center gap-6 text-xs text-[color:var(--mid)]">
             <Link href="/privacy" className="transition-colors hover:text-[color:var(--custodi-gold)]">
               Privacy Policy

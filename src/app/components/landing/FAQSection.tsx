@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "Which platforms does Custodi support?",
-    a: "Custodi is available for macOS and Windows. Linux support is on the roadmap.",
+    a: "Custodi is available for macOS, Windows, and Linux.",
   },
 ];
 

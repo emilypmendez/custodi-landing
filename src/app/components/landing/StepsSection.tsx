@@ -1,12 +1,14 @@
 import Link from "next/link";
+import PlatformBadges from "./PlatformBadges";
 
 const steps = [
   {
     number: "01",
     title: "Download Custodi",
     description:
-      "Install the desktop app on your Mac or Windows machine. Setup takes under two minutes. Your Safety Agent activates immediately — locally, with no cloud dependency.",
-    tags: ["Available for macOS & Windows"],
+      "Install the desktop app on your Mac, Windows, or Linux machine. Setup takes under two minutes. Your Safety Agent activates immediately — locally, with no cloud dependency.",
+    tags: [],
+    platforms: true,
     icon: (
       <svg className="h-5 w-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M10 3v10M6 9l4 4 4-4M4 16h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -73,6 +75,7 @@ const StepsSection = () => {
               <p className="mb-5 text-sm leading-relaxed text-[color:var(--mid)]">{step.description}</p>
               {/* Tags */}
               <div className="flex flex-wrap gap-2">
+                {"platforms" in step && step.platforms && <PlatformBadges variant="pill" />}
                 {step.tags.map((tag) => (
                   <span
                     key={tag}
