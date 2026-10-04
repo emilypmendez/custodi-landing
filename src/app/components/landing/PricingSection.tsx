@@ -4,7 +4,7 @@ const plans = [
   {
     name: "FREE",
     price: "$0",
-    fee: "2.99% processing fee per transaction",
+    fees: ["2.99% processing fee per transaction"],
     features: [
       "Safety Agent enforcement",
       "Public transfers",
@@ -15,25 +15,41 @@ const plans = [
   },
   {
     name: "PROFESSIONAL",
-    price: "$25/month",
-    fee: "2.99% processing fee per transaction",
+    price: "$2,500/year",
+    fees: [
+      "2.99% processing fee per transaction",
+      "$600/year maintenance for software updates",
+    ],
     features: [
       "Private transfers via Unlink",
-      "AMBER cooling off protection",
+      "Import contacts",
+      "Trusted contacts list",
+      "Transaction history & verdict log",
+      "Custom alerts",
+      "Spending insights",
       "Priority updates",
+      "Priority support",
       "Multi-wallet support",
     ],
     highlighted: true,
   },
   {
     name: "ENTERPRISE",
-    price: "$50/seat/month",
-    fee: "2.99% processing fee per transaction",
+    price: "$5,000/seat/year",
+    fees: [
+      "2.99% processing fee per transaction",
+      "$600/year maintenance for software updates",
+    ],
     features: [
       "Multi-sig approvals",
       "Admin-level risk thresholds",
-      "Audit exports",
+      "Compliance-ready audit exports",
       "Team governance controls",
+      "Role-based access",
+      "SSO / SAML login (coming soon)",
+      "Shared contacts directory (coming soon)",
+      "Dedicated account manager & SLA (coming soon)",
+      "Custom onboarding (coming soon)",
       "Managed recovery (coming soon)",
     ],
     highlighted: false,
@@ -61,7 +77,7 @@ const PricingSection = () => {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`rounded-2xl border p-5 sm:p-8 transition-transform duration-300 ease-out hover:scale-105 ${
+              className={`flex flex-col rounded-2xl border p-5 sm:p-8 transition-transform duration-300 ease-out hover:scale-105 ${
                 plan.highlighted
                   ? "border-[rgba(255,255,255,.25)] bg-[linear-gradient(180deg,rgba(201,168,76,.10),transparent_70%),#1e1e1e] shadow-[0_0_40px_rgba(255,255,255,.15)]"
                   : "border-[rgba(201,168,76,.35)] bg-[#1e1e1ecc] shadow-[0_0_40px_rgba(201,168,76,.20)]"
@@ -73,15 +89,19 @@ const PricingSection = () => {
               <div className="mt-6 text-4xl font-semibold text-[color:var(--off-white)]">
                 {plan.price.includes("/") ? (
                   <>
-                    {plan.price.split("/")[0]}
-                    <span className="text-base font-normal text-[color:var(--mid)]">/{plan.price.split("/")[1]}</span>
+                    {plan.price.slice(0, plan.price.indexOf("/"))}
+                    <span className="text-base font-normal text-[color:var(--mid)]">{plan.price.slice(plan.price.indexOf("/"))}</span>
                   </>
                 ) : (
                   plan.price
                 )}
               </div>
-              <p className="mt-2 text-sm text-[color:var(--mid)]">{plan.fee}</p>
-              <ul className="mt-6 space-y-3 text-[15px] leading-relaxed text-[rgba(244,244,244,.88)]">
+              <ul className="mt-2 space-y-1 text-sm text-[color:var(--mid)]">
+                {plan.fees.map((fee) => (
+                  <li key={fee}>{fee}</li>
+                ))}
+              </ul>
+              <ul className="mt-6 mb-8 space-y-3 text-[15px] leading-relaxed text-[rgba(244,244,244,.88)]">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-3">
                     <span className="mt-0.5 text-[color:var(--custodi-gold)]">✓</span>
@@ -91,7 +111,7 @@ const PricingSection = () => {
               </ul>
               <Button
                 asChild
-                className={`mt-8 w-full rounded-xl px-4 py-3 text-sm font-semibold ${
+                className={`mt-auto w-full rounded-xl px-4 py-3 text-sm font-semibold ${
                   plan.highlighted
                     ? "bg-[color:var(--custodi-gold)] text-[color:var(--custodi-dark)] hover:bg-[#d4b85c]"
                     : "border border-[color:var(--border)] bg-[#1e1e1e] text-[color:var(--off-white)] hover:bg-[#2a2a2a]"
