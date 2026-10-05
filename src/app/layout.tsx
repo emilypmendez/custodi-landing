@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Cormorant_Garamond, Instrument_Sans, DM_Mono } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
@@ -31,6 +32,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${cormorant.variable} ${instrument.variable} ${dmMono.variable}`}>
       <body>
         {children}
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18494661252"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18494661252');
+          `}
+        </Script>
       </body>
     </html>
   );
