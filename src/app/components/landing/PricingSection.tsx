@@ -15,7 +15,7 @@ const plans = [
   },
   {
     name: "PROFESSIONAL",
-    price: "$2,500/year",
+    price: "$995/year",
     fees: [
       "2.99% processing fee per transaction",
       "$600/year maintenance for software updates",
@@ -35,7 +35,7 @@ const plans = [
   },
   {
     name: "ENTERPRISE",
-    price: "$5,000/seat/year",
+    price: "$2,500/seat/year",
     fees: [
       "2.99% processing fee per transaction",
       "$600/year maintenance for software updates",
